@@ -391,7 +391,7 @@ public abstract class AbstractConfig implements Config {
   /**
    * Clear config cache
    */
-  protected void clearConfigCache() {
+  public void clearConfigCache() {
     synchronized (this) {
       for (Cache c : allCaches) {
         if (c != null) {

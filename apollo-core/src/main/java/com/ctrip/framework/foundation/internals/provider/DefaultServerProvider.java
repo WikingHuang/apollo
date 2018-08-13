@@ -125,9 +125,10 @@ public class DefaultServerProvider implements ServerProvider {
       return;
     }
 
-    // 4. Set environment to null.
-    m_env = null;
-    logger.info("Environment is set to null. Because it is not available in either (1) JVM system property 'env', (2) OS env variable 'ENV' nor (3) property 'env' from the properties InputStream.");
+    // 4. Set environment to Default.
+    // 当没有配置env时，默认为DEV
+    m_env = "DEV";
+    logger.warn("没有配置env，使用默认值DEV");
   }
 
   private void initDataCenter() {

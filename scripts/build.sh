@@ -36,3 +36,9 @@ echo "==== starting to build portal ===="
 mvn clean package -DskipTests -pl apollo-portal -am -Dapollo_profile=github,auth -Dspring_datasource_url=$apollo_portal_db_url -Dspring_datasource_username=$apollo_portal_db_username -Dspring_datasource_password=$apollo_portal_db_password $META_SERVERS_OPTS
 
 echo "==== building portal finished ===="
+
+echo "==== starting to build client ===="
+
+mvn clean deploy -DskipTests -pl apollo-client
+
+echo "==== building client finished ===="

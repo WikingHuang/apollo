@@ -182,4 +182,9 @@ public interface Config {
    * @return the property names
    */
   public Set<String> getPropertyNames();
+
+  /**
+   * for unit test
+   */
+  public void clearConfigCache();
 }
