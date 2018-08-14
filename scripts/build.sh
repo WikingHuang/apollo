@@ -39,6 +39,6 @@ echo "==== building portal finished ===="
 
 echo "==== starting to build client ===="
 
-mvn clean deploy -DskipTests -pl apollo-client
+mvn clean deploy -DskipTests -pl apollo-client -am
 
 echo "==== building client finished ===="

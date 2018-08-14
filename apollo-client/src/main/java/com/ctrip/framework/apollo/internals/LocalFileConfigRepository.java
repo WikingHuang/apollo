@@ -31,7 +31,7 @@ import com.google.common.base.Preconditions;
 public class LocalFileConfigRepository extends AbstractConfigRepository
     implements RepositoryChangeListener {
   private static final Logger logger = LoggerFactory.getLogger(LocalFileConfigRepository.class);
-  private static final String CONFIG_DIR = "/config-cache";
+  private static final String CONFIG_DIR = "/config";
   private final String m_namespace;
   private File m_baseDir;
   private final ConfigUtil m_configUtil;

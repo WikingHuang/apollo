@@ -89,7 +89,7 @@ public class DefaultServerProviderTest {
     defaultServerProvider.initialize(null);
 
     assertNull(defaultServerProvider.getDataCenter());
-    assertFalse(defaultServerProvider.isEnvTypeSet());
-    assertNull(defaultServerProvider.getEnvType());
+    assertTrue(defaultServerProvider.isEnvTypeSet());
+    assertEquals(defaultServerProvider.getEnvType(), "DEV");
   }
 }

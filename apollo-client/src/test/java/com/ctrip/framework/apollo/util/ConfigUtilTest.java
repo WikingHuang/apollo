@@ -202,7 +202,7 @@ public class ConfigUtilTest {
 
     doReturn(someAppId).when(configUtil).getAppId();
 
-    assertEquals(someCacheDir + File.separator + someAppId, configUtil.getDefaultLocalCacheDir());
+    assertEquals(someCacheDir, configUtil.getDefaultLocalCacheDir());
   }
 
   @Test
