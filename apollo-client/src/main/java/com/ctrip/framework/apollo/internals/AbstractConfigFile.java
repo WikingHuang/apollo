@@ -118,4 +118,9 @@ public abstract class AbstractConfigFile implements ConfigFile, RepositoryChange
       });
     }
   }
+
+  @Override
+  public Properties getProperties() {
+    return m_configProperties.get();
+  }
 }

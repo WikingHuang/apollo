@@ -2,6 +2,8 @@ package com.ctrip.framework.apollo;
 
 import com.ctrip.framework.apollo.core.enums.ConfigFileFormat;
 
+import java.util.Properties;
+
 /**
  * @author Jason Song(song_s@ctrip.com)
  */
@@ -36,4 +38,10 @@ public interface ConfigFile {
    * @param listener the config file change listener
    */
   void addChangeListener(ConfigFileChangeListener listener);
+
+  /**
+   * Get Properties instance
+   * @return
+   */
+  Properties getProperties();
 }

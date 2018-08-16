@@ -2,6 +2,7 @@ package com.ctrip.framework.apollo;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.Properties;
 import java.util.Set;
 
 import org.junit.Before;
@@ -76,7 +77,8 @@ public class ConfigServiceTest {
     MockInjector.setInstance(ConfigFactory.class, someNamespaceFileName, new MockConfigFactory());
 
     ConfigFile configFile = ConfigService.getConfigFile(someNamespace, someConfigFileFormat);
-
+    System.out.println(configFile.getContent());
+    System.out.println(configFile.getProperties());
     assertEquals(someNamespaceFileName, configFile.getNamespace());
     assertEquals(someNamespaceFileName + ":" + someConfigFileFormat.getValue(), configFile.getContent());
   }
@@ -136,6 +138,11 @@ public class ConfigServiceTest {
     @Override
     public void addChangeListener(ConfigFileChangeListener listener) {
 
+    }
+
+    @Override
+    public Properties getProperties() {
+      return null;
     }
   }
 
